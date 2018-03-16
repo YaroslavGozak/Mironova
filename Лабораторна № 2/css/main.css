@@ -6,25 +6,19 @@ body{
 	background-attachment: fixed;
 }
 
+fieldset{
+	border-radius: 5px;
+}
+
 .logo, .logo img{
 	background-color: #FFFFFF;
 	border-top-right-radius: inherit;
 	border-top-left-radius: inherit;
 }
 
-.footer-info{
-	color: Gray;
-	font-size: 20px;
-}
-
-footer span.number{
-	font-size: 30px;
-	color: #40E0D0;
-}
-
-footer a{
-	color: Gray; 
-	text-decoration: none;
+.footer fieldset{
+	background-color: #F8F8FF;
+	border-radius: 7px;
 }
 
 .article h3{
@@ -36,7 +30,7 @@ footer a{
 	margin-top: 0;
 }
 
-aside form{
+.login-form{
 	border-radius: 5px;
 	padding-left: 10px;
 	padding-right:  10px;
@@ -44,11 +38,22 @@ aside form{
 	margin-bottom: 10px;
 }
 
-fieldset{
-	border-radius: 5px;
+.footer-info{
+	color: Gray;
+	font-size: 20px;
 }
 
-a.list-item{
+.footer-info .number{
+	font-size: 30px;
+	color: #40E0D0;
+}
+
+.gray-link{
+	color: Gray; 
+	text-decoration: none;
+}
+
+.list-item{
 	text-decoration: none;
 	color: black;
 }
@@ -64,11 +69,6 @@ a.list-item{
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.footer fieldset{
-	background-color: #F8F8FF;
-	border-radius: 7px;
 }
 
 .fluid, .container{
