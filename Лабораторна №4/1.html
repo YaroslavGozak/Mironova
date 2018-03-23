@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title> 1 </title>
+		<meta charset="UTF-8">
+		<script>
+			window.onload = showAllData();
+
+			function showAllData(){
+				let status = getStatus();
+				let birthday = getBirthdayDayOfWeek();
+				document.write(status);
+				document.write("<br/>" + "День недели дня рождения: " + birthday);
+
+				document.write("<br/>" + "24 сентября 10 лет назад был днем недели: " + getSeptember24OfYear(new Date().getYear() - 10));
+				document.write("<br/>" + "24 сентября 12 лет назад был днем недели: " + getSeptember24OfYear(new Date().getYear() - 12));
+				document.write("<br/>" + "24 сентября 25 лет назад был днем недели: " + getSeptember24OfYear(new Date().getYear() - 25));
+				document.write("<br/>" + "24 сентября 38 лет назад был днем недели: " + getSeptember24OfYear(new Date().getYear() - 38));
+				document.write("<br/>" + "24 сентября 3 года вперед будет днем недели: " + getSeptember24OfYear(new Date().getYear() + 3));
+			}
+
+			function getStatus(){
+				let date = new Date();
+				let dateString = "Сегодня " + (date.getDate() + 1) + "/" + date.getMonth() + "/" + date.getYear() + " " + date.getHours() + ":" + date.getMinutes();
+				window.status = dateString;
+				return dateString;
+			}
+
+			function getBirthdayDayOfWeek(){
+				let birthday = new Date(1997,11 - 1,18);
+				let day = getDayOfWeek(birthday);
+				return day;
+			}
+
+			function getSeptember24OfYear(year){
+				let date = new Date(year, 10, 24);
+				return getDayOfWeek(date);
+			}
+
+			function getDayOfWeek(date){
+				let day = date.getDay();
+
+				let weekday=new Array(7);
+				weekday[0]="Monday";
+				weekday[1]="Tuesday";
+				weekday[2]="Wednesday";
+				weekday[3]="Thursday";
+				weekday[4]="Friday";
+				weekday[5]="Saturday";
+				weekday[6]="Sunday";
+
+				return weekday[day];
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+	</body>
+</html>

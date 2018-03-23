@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title> 2 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			function calculateInterval(form,){
+				let minutes1 = +form.min1.value;
+				let minutes2 = +form.min2.value;
+				let hours1 = +form.hour1.value;
+				let hours2 = +form.hour2.value;
+
+				let date1 = new Date();
+				date1.setMinutes(minutes1);
+				date1.setHours(hours1);
+
+				let date2 = new Date();
+				date2.setMinutes(minutes2);
+				date2.setHours(hours2);
+
+				let interval = getTimeInterval(date1, date2);
+				form.interval.value = interval;
+			}
+
+			function getTimeInterval(date1, date2){
+				let milliseconds_in_one_hour =1000 * 60 * 60;
+
+	            let time_diff_in_milliseconds = Math.abs(date1.getTime() - date2.getTime()) - 2*milliseconds_in_one_hour; // in milliseconds
+				let time = new Date(time_diff_in_milliseconds);
+
+	            let interval = time.getHours() + " часов, " + time.getMinutes() + " минут";
+	            return interval;
+        	}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<form name="form">	
+			<fieldset>	
+				<legend>Интервал между 2 временными отрезками</legend>
+				<label for="hour1">Часы 1</label>
+				<input type="number" name="hour1" value="5">
+				<label for="min1">Минуты 1</label>
+				<input type="number" name="min1" value="5">
+				<br/>
+				<label for="hour2">Часы 2</label>
+				<input type="number" name="hour2" value="4">
+				<label for="min2">Минуты 2</label>
+				<input type="number" name="min2" value="16">
+				<br/>
+				<input type="button" onclick="calculateInterval(form)" value="Посчитать">
+				<output name="interval"></output>
+			</fieldset>
+		</form>
+	</body>
+</html>

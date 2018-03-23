@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title> 5 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			var a = 6.1;
+			var b = 12;
+
+			window.onload = function(){
+				let form = document.getElementById("form");
+				form.a.value = a;
+				form.b.value = b;
+			};
+
+			function calculate(form){
+				let x = new Number(form.x.value);
+
+				let first_part = calculateFirstPart(a,b,x);
+				let second_part = calculateSecondPart(a,b,x);
+				let third_part = calculateThirdPart(a,b,x);
+				let result = first_part - (second_part*third_part);
+				
+				displayResult(result);
+			}
+
+			function calculateFirstPart(a, b, x){
+				let denominator = (a - b) * (b + x);
+				let result =  (b / denominator);
+				result = result.toFixed(2);
+				return result;
+			}
+
+			function calculateSecondPart(a, b, x){
+				let denominator = (a - b) * (a - b);
+				let result = a / denominator;
+				result = result.toFixed(2);
+				return result;
+			}
+
+			function calculateThirdPart(a, b, x){
+				let denominator = (b + x);
+				let numerator = (a + x);
+				let result =  Math.log(numerator/denominator);
+				result = result.toFixed(2);
+				return result;
+			}
+
+			function displayResult(result){
+				result = result.toFixed(2);
+
+				form.result.style.color = "black";
+				if(isNaN(result)){
+					result = "Плохое значение x";
+					form.result.style.color = "red";
+				}
+
+				form.result.value = result;
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<div class="container">
+			<form name="form" id="form">		
+				<fieldset>
+					<legend>Нахождение значения функции в точке</legend>
+					<label for=function>Функция: </label>
+					<output id="function">t1 = (b / (a - b)*(b + x)) - (a / (a - b)^2) * (ln((a + x)/(b + x)))</output>
+					<br/>
+					<label for=a>Параметр а: </label>
+					<output id="a" name="a"></output>
+					<br/>
+					<label for=b>Параметр b: </label>
+					<output id="b" name="b"></output>
+					<br/>
+					<label for=input>Введите значение Х: </label>
+					<input type="text" size="10" name="x" value="0">
+					<br/>
+					<input type="button" onclick="calculate(form)" value="Вычислить">
+					<hr/>
+					<label for="result">Результат</label>
+					<output id="result" name="result"></output>
+					<br/>
+					<input type="reset" name="">
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

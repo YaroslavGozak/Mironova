@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title> Найменьшее число </title>
+		<meta charset="UTF-8">
+		<script>
+			function getMin(form){
+				var arrayString = String(form.arrayString.value);
+				var array = parseString(arrayString);
+				var min = array[0];
+				for(var i = 1; i < array.length; i++){
+					if(array[i] < min)
+						min = array[i];
+				}
+				form.res.value = String(min);
+			}
+			function parseString(string){
+				console.log(string);
+				var stringArray = string.split(',');
+				console.log(stringArray);
+				var array = [];
+				for(var i = 0; i < stringArray.length; i++){
+					array[i] = parseInt(stringArray[i],10);
+				}
+				console.log(array);
+				return array;
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<h4>Найменьшее число</h4>
+		<form name="form1">
+			Числa через запятую: <input type="text" name="arrayString" type="text" size="25"><hr>
+			Найменьшее число равно
+			<input type="button" value="Определить" onclick="getMin(form1)">
+			<input type="text" name="res" size="8"><hr>
+			<input type="reset">
+		</form>
+	</body>
+</html>

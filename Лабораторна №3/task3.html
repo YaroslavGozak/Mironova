@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title> row_averages </title>
+		<meta charset="UTF-8">
+		<script>
+			function matrixArray(rows,columns){
+				var arr = new Array();
+				for(var i=0; i<rows; i++){
+			    	arr[i] = new Array();
+			    	for(var j=0; j<columns; j++){
+			      		arr[i][j] = i+j+1;//вместо i+j+1 пишем любой наполнитель. В простейшем случае - null
+			    	}
+			  	}
+			  	console.log(arr);
+			  	return arr;
+			}
+			
+			function row_averages(matrix){
+				var averages = [];
+				for(var i = 0; i < matrix.length; i++){
+					var sum = 0;
+					for(var j = 0; j < matrix[i].length; j++){
+						sum += matrix[i][j];
+					}
+					var avg = sum  / matrix[i].length;
+					averages[i] = avg;
+				}
+				return averages;
+			}
+			function create_and_calculate(form){
+				var myMatrix = matrixArray(form.cols.value || 2, form.rows.value || 2);
+				var averages = row_averages(myMatrix);
+				console.log(averages);
+				form.res.value = averages;
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<h4>row_averages</h4>
+		<form name="form1">
+			<hr>
+			Кол-во рядков <input type="text" name="cols" type="text" size="6"> <br>
+			Кол-во столбцов <input type="text" name="rows" size="6"><hr>
+			<input type="button" value="Определить" onclick="create_and_calculate(form1)">
+			<input type="text" name="res" size="30"><hr>
+			<input type="reset">
+		</form>
+	</body>
+</html>

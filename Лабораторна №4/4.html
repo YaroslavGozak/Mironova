@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title> 4 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			function checkValue(form){
+				let _isNumber = isNumber(form.input.value);
+				if(_isNumber)
+					form.result.value = "Число";
+				else
+					form.result.value = "Не число";
+			}
+
+			function isNumber(text){
+				return !isNaN(text);
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<div class="container">
+			<h3>Является ли текст чилом</h3>
+			<form name="form">		
+				<fieldset>
+					<legend>Введите текст и переведите фокус от поля ввода</legend>
+					<label for=input>Введите текст для проверки</label>
+					<input type="text" size="30" name="input" onblur="checkValue(form)">
+
+					<output name="result"></output>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

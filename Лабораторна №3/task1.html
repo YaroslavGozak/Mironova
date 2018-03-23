@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> Изменяем знак числа </title>
+		<meta charset="UTF-8">
+		<script>
+			function invert(obj){
+				var a = Number(obj.num1.value);
+				obj.res.value = -a;
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC">
+		<h4>Меняем знак числа</h4>
+		<form name="form1">
+			Число: <input type="text" name="num1" type="text" size="8"><hr>
+			После изменения знака число равно
+			<input type="button" value="Определить" onclick="invert(form1)">
+			<input type="text" name="res" size="8"><hr>
+			<input type="reset">
+		</form>
+	</body>
+</html>

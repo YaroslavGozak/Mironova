@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title> 3 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			function startTime() {
+			    let today = new Date();
+			    let h = today.getHours();
+			    let min = today.getMinutes();
+			    let s = today.getSeconds();
+			    let d = today.getDate();
+			    let month = today.getMonth() + 1;
+			    let y = today.getFullYear();
+			    min = formatTime(min);
+			    s = formatTime(s);
+			    d = formatTime(d);
+			    document.getElementById('clock').value =
+			    d + "/" + month + "/" + y + " " + h + ":" + min + ":" + s;
+			    let t = setTimeout(startTime, 500);
+			}
+			function formatTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFCC" onload="startTime()">
+		<div class="container">
+			<form name="form">	
+				<fieldset>	
+					<legend>Время</legend>
+					<output id="clock"></output>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
