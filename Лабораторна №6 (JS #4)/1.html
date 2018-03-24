@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 1 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="two-cols">
+			<div id="custom_img"></div>
+		</div>
+		<div class="two-cols">
+			<div class="container">
+				<form name="form" id="form">		
+					<fieldset>
+						<legend>Изменение свойств изображения</legend>
+						<div class="field-group">
+							<label for=background>Цвет фона:</label>
+							<input type="text" size="10" name="background" id="background">
+						</div>
+						<div class="field-group">
+							<label for=width>Ширина:</label>
+							<input type="text" size="10" name="width" id="width">
+						</div>
+						<div class="field-group">
+							<label for=height>Высота: </label>
+							<input type="text" size="10" name="height" id="height">
+						</div>
+						<div class="field-group">
+							<label for=borderWeight>Толщина рамки: </label>
+							<input type="text" size="10" name="borderWeight" id="borderWeight">
+						</div>
+						<div class="field-group">
+							<label for=borderRadius>Радиус рамки:</label>
+							<input type="text" size="10" name="borderRadius" id="borderRadius">
+						</div>
+						<div class="field-group">
+							<label for=borderColor>Цвет рамки: </label>
+							<input type="text" size="10" name="borderColor" id="borderColor">
+						</div>
+						
+						<div class="field-group">
+							<input type="reset" name="" value="Очистить"></input>
+							<input type="button" name="" onclick="renderImage(form)" value="Отрисовать"></input>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="1.js"></script>
+	</body>
+</html>

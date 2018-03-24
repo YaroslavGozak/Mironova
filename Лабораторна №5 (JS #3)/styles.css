@@ -1,0 +1,47 @@
+body{
+	background-color: #FFFFCC;
+	font-family: Helvetica, Arial;
+}
+
+.container{
+	width: 50%;
+	margin-left: 25%; 
+
+}
+
+.container fieldset{
+	border-radius: 7px;
+}
+
+.container fieldset label{
+	display: inline-block;;
+	min-width: 160px;
+}
+
+input{
+	border-radius: 3px;
+}
+
+input[type="text"]{
+	min-width: 160px;
+}
+
+input[type="button"]{
+	padding: 3px 6px;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+input[type="reset"]{
+	padding: 3px 6px;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+.field-group{
+	margin-top: 5px;
+}
+
+.warning, .obligatory{
+	color: red;
+}

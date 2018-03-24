@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 1 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="1.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<form name="form" id="form">		
+				<fieldset>
+					<legend>Ваши данные</legend>
+					<div class="field-group">
+						<label for=fname>Имя:<span class="obligatory">*</span> </label>
+						<input type="text" size="10" name="fname" id="fname">
+						<output name="fnameIncorrect" class="warning"></output>
+					</div>
+					<div class="field-group">
+						<label for=lname>Фамилия:<span class="obligatory">*</span> </label>
+						<input type="text" size="10" name="lname" id="lname">
+						<output name="lnameIncorrect" class="warning"></output>
+					</div>
+					<div class="field-group">
+						<label for=country>Страна: </label>
+						<input type="text" size="10" name="country" id="country">
+					</div>
+					<div class="field-group">
+						<label for=city>Город: </label>
+						<input type="text" size="10" name="city" id="city">
+					</div>
+					<div class="field-group">
+						<label for=street>Улица: </label>
+						<input type="text" size="10" name="street" id="street">
+					</div>
+					<div class="field-group">
+						<label for=index>Почтовый индекс:<span class="obligatory">*</span> </label>
+						<input type="text" size="10" name="index" id="index">
+						<output name="indexIncorrect" class="warning"></output>
+					</div>
+					<div class="field-group">
+						<label for=email>Електронная почта:<span class="obligatory">*</span> </label>
+						<input type="text" size="10" name="email" id="email">
+						<output name="emailIncorrect" class="warning"></output>
+					</div>
+					<div class="field-group">
+						<input type="reset" name="" value="Очистить"></input>
+						<input type="button" name="" onclick="checkForm(form)" value="Отправить"></input>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
