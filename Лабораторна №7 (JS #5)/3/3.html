@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>2</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h3>Таблица товаров</h3>
+			<table id="price-list">
+				<thead>
+					<th></th>
+					<th> Название товара</th>
+					<th>Производитель</th>
+					<th>Цена</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Карандаш обычный</td>
+						<td>SOLID</td>
+						<td class="price">4</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Карандаш простой</td>
+						<td>SOLID</td>
+						<td class="price">3</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Карандаш золотой</td>
+						<td>SOLID</td>
+						<td class="price">315.76</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Тетрадь красивая</td>
+						<td>WriteR</td>
+						<td class="price">27</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Книга по математике</td>
+						<td>SOLID</td>
+						<td class="price">112</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Блокнот для записей</td>
+						<td>SOLID</td>
+						<td class="price">77</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Блокнот для рисования</td>
+						<td>SOLID</td>
+						<td class="price">91</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Скетчбук</td>
+						<td>Painter</td>
+						<td class="price">112</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Альбом для рисования</td>
+						<td>Painter</td>
+						<td class="price">122</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" onclick="calculatePrice(this)"></td>
+						<td>Альбом для рисования с рисунком</td>
+						<td>Painter</td>
+						<td class="price">157</td>
+					</tr>
+					<tr>
+						<td colspan="4">Цена: <span id="price-total"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script type="text/javascript" src="3.js"></script>
+	</body>
+</html>

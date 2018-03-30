@@ -1,0 +1,100 @@
+body{
+	background-color: #FFFFCC;
+	font-family: Helvetica, Arial;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.container{
+	width: 50%;
+	margin-left: 25%; 
+
+}
+
+.container fieldset{
+	border-radius: 7px;
+}
+
+.container fieldset label{
+	display: inline-block;;
+	min-width: 160px;
+}
+
+input{
+	border-radius: 3px;
+}
+
+input[type="text"]{
+	min-width: 160px;
+}
+
+input[type="button"]{
+	padding: 3px 6px;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+input[type="reset"]{
+	padding: 3px 6px;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+div.label{
+	text-align: center;
+}
+
+.field-group{
+	margin-top: 5px;
+}
+
+.warning, .obligatory{
+	color: red;
+}
+
+.two-cols{
+	display: inline-block;
+	width: 49%;
+}
+
+.chart-column{
+	display: inline-block;
+	margin: 0 1%;
+	width: 22.5%;
+}
+
+#custom_menu{
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	color:silver;
+	visibility: hidden;
+}
+
+.chart{
+	min-height: 300px;
+	margin-top: 30px;
+	align-content: space-around;
+	width: 60%;
+	margin-left: 20%
+}
+
+.alt{
+	visibility: hidden;
+}
+
