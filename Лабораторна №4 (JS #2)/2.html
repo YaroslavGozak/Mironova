@@ -25,10 +25,31 @@
 			function getTimeInterval(date1, date2){
 				let milliseconds_in_one_hour =1000 * 60 * 60;
 
-	            let time_diff_in_milliseconds = Math.abs(date1.getTime() - date2.getTime()) - 2*milliseconds_in_one_hour; // in milliseconds
-				let time = new Date(time_diff_in_milliseconds);
+				if(date1 > date2){
+					date2 = date2.setDate(date2.getDate() + 1);
+					date2 = new Date(date2);
+				}
 
-	            let interval = time.getHours() + " часов, " + time.getMinutes() + " минут";
+				console.log(date2);
+				console.log(date1);
+	            let time_diff_in_milliseconds = (date2.getTime() - date1.getTime());// - 2*milliseconds_in_one_hour; // in milliseconds
+				let time = new Date(time_diff_in_milliseconds);
+				console.log(time_diff_in_milliseconds);
+				console.log(time);
+				console.log(date2);
+				console.log(date1);
+
+				let hours_decimal = time_diff_in_milliseconds / milliseconds_in_one_hour;
+				let hours = hours_decimal.toFixed(0);
+				let minutes_decimal = hours_decimal - hours;
+				let minutes = (minutes_decimal * 60).toFixed(0);;
+				console.log(hours_decimal);
+				console.log(hours);
+				console.log(minutes_decimal);
+				console.log(minutes);
+				console.log(time_diff_in_milliseconds / milliseconds_in_one_hour);
+	            let interval = hours+ " часов, " + minutes + " минут";
+	            console.log(interval);
 	            return interval;
         	}
 		</script>
