@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 2 </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+			<div class="container">
+				<form name="form" id="form">		
+					<fieldset>
+						<legend>Стоимость услуг предприятий</legend>
+						<div class="field-group">
+							<label for=fagames>4A GAMES:</label>
+							<input type="text" size="10" name="fagames" id="fagames" value="0">
+						</div>
+						<div class="field-group">
+							<label for=gsc>GSC:</label>
+							<input type="text" size="10" name="gsc" id="gsc" value="0">
+						</div>
+						<div class="field-group">
+							<label for=vgames>Vostok Games: </label>
+							<input type="text" size="10" name="vgames" id="vgames" value="0">
+						</div>
+						<div class="field-group">
+							<label for=ubisoft>Ubisoft: </label>
+							<input type="text" size="10" name="ubisoft" id="ubisoft" value="0">
+						</div>
+						
+						<div class="field-group">
+							<input type="reset" value="Очистить"></input>
+							<input type="button" onclick="renderChart(form)" value="Построить"></input>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="chart">
+				<h3>Диаграмма</h3>
+				<div class="chart-column-wrapper">
+					<div class="chart-column" id="fagamesChart">
+						<div class="alt"></div>
+						<div class="post" onmouseover="displayAlt(event)" onmouseout="hideAlt(event)"></div>
+						<div class="label">4A GAMES</div>
+					</div>
+				</div>
+				<div class="chart-column-wrapper">
+					<div class="chart-column" id="gscChart">
+						<div class="alt"></div>
+						<div class="post"  onmouseover="displayAlt(event)" onmouseout="hideAlt(event)"></div>
+						<div class="label">GSC</div>
+					</div>
+				</div>
+				<div class="chart-column-wrapper">
+					<div class="chart-column" id="vgamesChart">
+						<div class="alt"></div>
+						<div class="post" onmouseover="displayAlt(event)" onmouseout="hideAlt(event)"></div>
+						<div class="label">Vostok Games</div>
+					</div>
+				</div>
+				<div class="chart-column-wrapper">
+					<div class="chart-column" id="ubisoftChart">
+						<div class="alt"></div>
+						<div class="post" onmouseover="displayAlt(event)" onmouseout="hideAlt(event)"></div>
+						<div class="label">Ubisoft</div>
+					</div>
+				</div>
+			</div>
+
+		<div id="custom_menu"></div>
+
+		<script type="text/javascript" src="2.js"></script>
+	</body>
+</html>
